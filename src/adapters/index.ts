@@ -1,0 +1,1 @@
+export { ServerExceptionAdapter } from './ServerExceptionAdapter';
