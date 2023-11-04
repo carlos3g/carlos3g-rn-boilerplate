@@ -35,6 +35,7 @@ module.exports = {
         checksVoidReturn: false,
       },
     ],
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     'comma-dangle': 0,
     'import/extensions': 0,
     'import/no-unresolved': 0,

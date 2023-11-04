@@ -1,15 +1,15 @@
-import { palette } from '@app/theme/palette';
+import { $palette } from '@app/theme/palette';
 import { createTheme } from '@shopify/restyle';
 
 // See: https://shopify.github.io/restyle/fundamentals
 
 export const theme = createTheme({
   colors: {
-    background: palette.white,
-    cardPrimaryBackground: palette.purple,
-    cardSecondaryBackground: palette.green,
-    title: palette.black,
-    text: palette.white,
+    background: $palette.white,
+    cardPrimaryBackground: $palette.purple,
+    cardSecondaryBackground: $palette.green,
+    title: $palette.black,
+    text: $palette.white,
   },
   spacing: {
     s: 8,
@@ -52,8 +52,8 @@ export const darkTheme: Theme = {
   ...theme,
   colors: {
     ...theme.colors,
-    background: palette.black,
-    title: palette.white,
+    background: $palette.black,
+    title: $palette.white,
   },
 };
 
