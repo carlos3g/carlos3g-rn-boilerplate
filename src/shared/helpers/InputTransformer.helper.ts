@@ -1,4 +1,4 @@
-import { FormatterHelper } from '@app/helpers/Formatter.helper';
+import { FormatterHelper } from '@app/shared/helpers/Formatter.helper';
 
 export class InputTransformerHelper {
   public static number(input: string): number {

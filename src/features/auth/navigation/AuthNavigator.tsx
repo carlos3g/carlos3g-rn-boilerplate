@@ -1,5 +1,5 @@
 import { ForgotPasswordScreen, SignInScreen, SignUpScreen } from '@app/features/auth/screens';
-import { type AuthStackParams } from '@app/types';
+import { AuthStackParams } from '@app/features/auth/types';
 import { createNativeStackNavigator, type NativeStackNavigationOptions } from '@react-navigation/native-stack';
 
 const { Navigator, Screen } = createNativeStackNavigator<AuthStackParams>();

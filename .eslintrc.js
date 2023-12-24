@@ -4,6 +4,7 @@ module.exports = {
   },
   extends: [
     'airbnb',
+    'plugin:@tanstack/eslint-plugin-query/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     '@react-native-community',

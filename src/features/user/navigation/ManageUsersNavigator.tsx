@@ -1,5 +1,5 @@
 import { CreateUserScreen, ListUsersScreen } from '@app/features/user/screens';
-import { ManageUsersStackParams } from '@app/types';
+import { ManageUsersStackParams } from '@app/features/user/types';
 import { createNativeStackNavigator, type NativeStackNavigationOptions } from '@react-navigation/native-stack';
 
 const { Navigator, Screen } = createNativeStackNavigator<ManageUsersStackParams>();

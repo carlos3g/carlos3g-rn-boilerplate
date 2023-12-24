@@ -1,5 +1,5 @@
-import { Icon, IconLibName } from '@app/components';
-import { Glyphs } from '@app/components/Icon';
+import { Icon, IconLibName } from '@app/shared/components';
+import { Glyphs } from '@app/shared/components/Icon';
 import { SettingsScreen } from '@app/features/settings/screens';
 import { ManageUsersNavigator } from '@app/features/user/navigation/ManageUsersNavigator';
 import type { AppTabParams } from '@app/types';

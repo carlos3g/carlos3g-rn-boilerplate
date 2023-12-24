@@ -1,34 +1,25 @@
-import { useAppState } from '@app/hooks';
 import { RootNavigator } from '@app/navigation';
+import {
+  initializeFlipperReactQueryDevTools,
+  initializeOnlineManager,
+  onAppStateChange,
+} from '@app/packages/react-query';
+import { useAppState } from '@app/shared/hooks';
 import { AuthProvider } from '@app/store/auth';
 import { HttpClientProvider } from '@app/store/httpClient';
 import { theme } from '@app/theme';
-import NetInfo from '@react-native-community/netinfo';
 import { ThemeProvider } from '@shopify/restyle';
-import { AppStateStatus, Platform } from 'react-native';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Host } from 'react-native-portalize';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Toast from 'react-native-toast-message';
-import { QueryClient, QueryClientProvider, focusManager, onlineManager } from 'react-query';
-
-const onAppStateChange = (status: AppStateStatus) => {
-  if (Platform.OS !== 'web') {
-    focusManager.setFocused(status === 'active');
-  }
-};
-
-// See: https://tanstack.com/query/v3/docs/react/react-native#online-status-management
-onlineManager.setEventListener((setOnline) => {
-  return NetInfo.addEventListener((state) => {
-    if (state.isConnected !== null) {
-      setOnline(state.isConnected);
-    }
-  });
-});
 
 const gestureHandlerStyle = { flex: 1 };
 const queryClient = new QueryClient();
+
+initializeFlipperReactQueryDevTools({ queryClient });
+initializeOnlineManager();
 
 const Providers = ({ children }: React.PropsWithChildren<unknown>) => (
   <QueryClientProvider client={queryClient}>
