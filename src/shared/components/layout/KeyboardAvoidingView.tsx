@@ -1,12 +1,10 @@
 import { Theme } from '@app/packages/restyle';
 import {
   BoxProps,
-  VariantProps,
   backgroundColor,
   backgroundColorShorthand,
   border,
   createRestyleComponent,
-  createVariant,
   layout,
   opacity,
   position,
@@ -15,13 +13,10 @@ import {
   spacingShorthand,
   visible,
 } from '@shopify/restyle';
-
-const variant = createVariant<Theme>({
-  themeKey: 'YStackVariants',
-  defaults: {
-    flexDirection: 'column',
-  },
-});
+import {
+  KeyboardAvoidingView as RNKeyboardAvoidingView,
+  KeyboardAvoidingViewProps as RNKeyboardAvoidingViewProps,
+} from 'react-native';
 
 const restyleFunctions = [
   backgroundColor,
@@ -34,9 +29,11 @@ const restyleFunctions = [
   border,
   shadow,
   position,
-  variant,
 ];
 
-export const YStack = createRestyleComponent<YStackProps, Theme>(restyleFunctions);
+export const KeyboardAvoidingView = createRestyleComponent<KeyboardAvoidingViewProps, Theme>(
+  restyleFunctions,
+  RNKeyboardAvoidingView
+);
 
-export type YStackProps = React.PropsWithChildren<VariantProps<Theme, 'YStackVariants'> & BoxProps<Theme>>;
+export type KeyboardAvoidingViewProps = React.PropsWithChildren<BoxProps<Theme>> & RNKeyboardAvoidingViewProps;

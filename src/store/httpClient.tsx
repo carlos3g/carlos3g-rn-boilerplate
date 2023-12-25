@@ -1,7 +1,7 @@
-import axios, { AxiosInstance } from 'axios';
-import { createContext, useContext, useEffect, useMemo } from 'react';
 import { EnvService } from '@app/services/Env.service';
-import { useAuth } from '@app/store/auth';
+import axios, { AxiosInstance } from 'axios';
+import { createContext, useContext, useMemo } from 'react';
+// import { useAuth } from '@app/store/auth';
 
 const httpClient = axios.create({
   baseURL: EnvService.API_DNS,
@@ -16,21 +16,21 @@ const HttpClientContext = createContext<IHttpClientContext>({
 });
 
 const HttpClientProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const { token } = useAuth();
+  // const { token } = useAuth();
 
-  useEffect(() => {
-    if (!token) {
-      return;
-    }
+  // useEffect(() => {
+  //   if (!token) {
+  //     return;
+  //   }
 
-    httpClient.interceptors.request.use((config) => {
-      if (!config.headers.Authorization) {
-        config.headers.setAuthorization(`Bearer ${token}`);
-      }
+  //   httpClient.interceptors.request.use((config) => {
+  //     if (!config.headers.Authorization) {
+  //       config.headers.setAuthorization(`Bearer ${token}`);
+  //     }
 
-      return config;
-    });
-  }, [token]);
+  //     return config;
+  //   });
+  // }, [token]);
 
   const values = useMemo(() => ({ httpClient }), []);
 

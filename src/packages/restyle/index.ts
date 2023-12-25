@@ -15,12 +15,11 @@ export const theme = createTheme({
     s: 8,
     m: 16,
     l: 24,
-    xl: 40,
+    xl: 32,
+    xxl: 40,
   },
-  breakpoints: {
-    phone: 0,
-    tablet: 768,
-  },
+  zIndices: {},
+  borderRadii: {},
   textVariants: {
     defaults: {
       color: 'text',
@@ -45,6 +44,14 @@ export const theme = createTheme({
     secondary: {
       backgroundColor: 'cardSecondaryBackground',
     },
+  },
+
+  YStackVariants: {
+    defaults: {},
+  },
+
+  XStackVariants: {
+    defaults: {},
   },
 });
 

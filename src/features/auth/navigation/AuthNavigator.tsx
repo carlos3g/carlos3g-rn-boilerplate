@@ -1,5 +1,5 @@
-import { ForgotPasswordScreen, SignInScreen, SignUpScreen } from '@app/features/auth/screens';
 import { AuthStackParams } from '@app/features/auth/types';
+import { SignInScreen, SignUpScreen } from '@app/screens';
 import { createNativeStackNavigator, type NativeStackNavigationOptions } from '@react-navigation/native-stack';
 
 const { Navigator, Screen } = createNativeStackNavigator<AuthStackParams>();
@@ -21,7 +21,6 @@ const AuthNavigator = () => (
   <Navigator initialRouteName="SignInScreen" screenOptions={defaultScreenOptions}>
     <Screen name="SignInScreen" component={SignInScreen} options={screenOptions.SignInScreen} />
     <Screen name="SignUpScreen" component={SignUpScreen} options={screenOptions.SignUpScreen} />
-    <Screen name="ForgotPasswordScreen" component={ForgotPasswordScreen} options={screenOptions.ForgotPasswordScreen} />
   </Navigator>
 );
 

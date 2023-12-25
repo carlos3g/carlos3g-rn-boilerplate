@@ -4,7 +4,6 @@ import { NativeStackNavigationProp, NativeStackScreenProps } from '@react-naviga
 export type AuthStackParams = {
   SignInScreen: undefined;
   SignUpScreen: undefined;
-  ForgotPasswordScreen: undefined;
 };
 
 // Helpers
