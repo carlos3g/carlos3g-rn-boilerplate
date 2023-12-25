@@ -10,16 +10,28 @@ export const theme = createTheme({
     cardSecondaryBackground: $palette.green,
     title: $palette.black,
     text: $palette.white,
+    transparent: 'transparent',
   },
   spacing: {
+    none: 0,
     s: 8,
     m: 16,
     l: 24,
     xl: 32,
     xxl: 40,
   },
-  zIndices: {},
-  borderRadii: {},
+  breakpoints: {},
+  zIndices: {
+    under: -1,
+  },
+  borderRadii: {
+    none: 0,
+    s: 2,
+    m: 4,
+    l: 8,
+    xl: 12,
+    xxl: 16,
+  },
   textVariants: {
     defaults: {
       color: 'text',

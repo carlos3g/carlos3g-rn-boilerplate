@@ -4244,6 +4244,11 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
+figma-squircle@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/figma-squircle/-/figma-squircle-0.2.1.tgz#08002658420076f318d846a558ee21de37ab8b27"
+  integrity sha512-UePsOSdigugsBvGZJAzrLeYY43fXy6iGQ7rz7bpEPd9jf54WbWM3jmgAF6VU0HANte1+hBiWb0PK6KyXTvXQdw==
+
 file-entry-cache@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/file-entry-cache/-/file-entry-cache-6.0.1.tgz#211b2dd9659cb0394b073e7323ac3c933d522027"
@@ -6874,6 +6879,13 @@ react-native-dotenv@^3.4.9:
   integrity sha512-dbyd+mcy7SUzxEgmt33TRf1FGcNe6swJhXmB0unKkI49F7+pidog9kPtjxMLTAfmKA8gcN2XHQSKltGfGbGCLQ==
   dependencies:
     dotenv "^16.3.1"
+
+react-native-figma-squircle@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/react-native-figma-squircle/-/react-native-figma-squircle-0.3.4.tgz#f98c68f426806f2ffad43c8ebfbea67ed1f01d0a"
+  integrity sha512-os9sQssA4qgSqPxpKOWKQKJodwyp+9r2lWm212se9WBI6T1yV2h1lLzYaUBJKpONvLL9uPTclKQg/4TBEk5BmQ==
+  dependencies:
+    figma-squircle "^0.2.1"
 
 react-native-flipper@^0.212.0:
   version "0.212.0"
